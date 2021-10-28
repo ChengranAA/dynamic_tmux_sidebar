@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 function pwdx {
   lsof -a -d cwd -p $1 -n -Fn | awk '/^n/ {print substr($0,2)}'
